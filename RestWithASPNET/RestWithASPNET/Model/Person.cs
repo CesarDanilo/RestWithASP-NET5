@@ -1,5 +1,6 @@
 ﻿namespace RestWithASPNET.Model
 {
+    // Pessoa
     public class Person
     {
         public long Id { get; set; }
