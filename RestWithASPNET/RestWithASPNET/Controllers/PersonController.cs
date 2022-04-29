@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//
+// Aqui e a parte do controller, oque vai cotrolar oque entra pela url e vai vazer os respectivos comados 
+// Apenas o get e o delete fucionam pela url 
+//
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RestWithASPNET.Model;
 using RestWithASPNET.Services;
@@ -13,7 +18,7 @@ namespace RestWithASPNET.Controllers
     [Route("api/[controller]")]
     public class PersonController : ControllerBase
     {
-        private readonly ILogger<PersonController> _logger;
+        private ILogger<PersonController> _logger;
         private IPersonService _personService;
 
         public PersonController(ILogger<PersonController> logger, IPersonService personService)
